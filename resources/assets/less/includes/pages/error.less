@@ -1,0 +1,35 @@
+#error {
+    position: relative;
+    height: 300px;
+
+    h1 {
+        font-weight: 500;
+        font-size: 80px;
+        text-align: center;
+        line-height: 300px;
+        margin: 0;
+        text-shadow: 0px 0px 2px @backgroundGray;
+        small {
+            position: relative;
+            top: -6px;
+        }
+    }
+
+    .fa-bg {
+        position: absolute;
+        top: -190px;
+        .opacity(0.2);
+        font-size: 700px;
+        left: 50%;
+        margin-left: -300px;
+    }
+    &.error-404 {
+
+    }
+
+    &.error-maintenance {
+        .fa-bg {
+            margin-left: -380px;
+        }
+    }
+}

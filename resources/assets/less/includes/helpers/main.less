@@ -1,0 +1,350 @@
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.text-muted, .muted {
+    color: @muted;
+}
+
+.text-primary {
+    color: @primary;
+    &:hover {
+        color: @primary;
+    }
+}
+
+.text-danger {
+    color: @danger;
+    &:hover {
+        color: @danger;
+    }
+}
+
+.text-success {
+    color: @success;
+    &:hover {
+        color: @success;
+    }
+}
+
+.text-info {
+    color: @info;
+    &:hover {
+        color: @info;
+    }
+}
+
+.text-default {
+    color: @default;
+    &:hover {
+        color: @default;
+    }
+}
+
+.text-facebook {
+    color: @facebookColor;
+}
+
+.text-foursquare {
+    color: @foursquareColor;
+}
+
+.text-twitter {
+    color: @twitterColor;
+}
+
+.text-gplus {
+    color: @googlePlusColor;
+}
+
+.text-pinterest {
+    color: @pinterestColor;
+}
+
+.text-hover-warning:hover {
+    color: @warning !important;
+}
+
+.text-hover-default:hover {
+    color: @default !important;
+}
+
+.text-hover-primary:hover {
+    color: @primary !important;
+}
+
+.text-hover-danger:hover {
+    color: @danger !important;
+}
+
+.text-hover-success:hover {
+    color: @success !important;
+}
+
+.text-hover-info:hover {
+    color: @info !important;
+}
+
+.text-hover-warning:hover {
+    color: @warning !important;
+}
+
+.text-hover-muted:hover {
+    color: @muted !important;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.font-weight-light {
+    font-weight: 100;
+}
+
+.font-weight-normal {
+    font-weight: 300;
+}
+
+.font-weight-semibold {
+    font-weight: 600;
+}
+
+.font-weight-bold {
+    font-weight: 800;
+}
+
+.bg-box {
+    background-color: @backgroundGray;
+}
+
+.bg-primary {
+    background-color: @primary;
+}
+
+.bg-success {
+    background-color: @success;
+}
+
+.bg-warning {
+    background-color: @warning;
+}
+
+.bg-danger {
+    background-color: @danger;
+}
+
+.bg-info {
+    background-color: @info;
+}
+
+.bg-default {
+    background-color: @default
+}
+
+textarea {
+    resize: vertical;
+}
+
+form {
+    margin-bottom: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+hr {
+    border-top: 1px solid @borderLight;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &.dotted {
+        border-top: 2px dashed #D6D6D6;
+        margin: 0;
+    }
+
+    &.double {
+        border-top: 1px solid @border;
+        border-bottom: 1px solid white;
+    }
+    &.darker {
+        border-top: 1px solid @border;
+    }
+}
+
+.fixed {
+    position: fixed;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.block {
+    display: block;
+}
+
+.none {
+    display: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.no-margin-top {
+    margin-top: 0px !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0px !important;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.fa {
+    &.fa-margin, &.fa-margin-right {
+        margin-right: 5px;
+    }
+
+    &.fa-margin-left {
+        margin-left: 5px;
+    }
+}
+
+.table {
+    width: 100%;
+
+    &.table-noborder {
+        tr {
+            th, td {
+                border: none !important;
+            }
+        }
+    }
+}
+
+.modal-footer {
+    margin-top: 0;
+}
+
+
+// RATING
+
+.rating {
+    unicode-bidi: bidi-override;
+    text-align: left;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.hover:hover {
+        .star:before {
+            font-size: 18px;
+            content: "\f006" !important;
+            color: #999 !important;
+        }
+    }
+    .stars {
+        display: inline-block;
+        width: 120px;
+        direction: rtl;
+
+        .star {
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            font-size: 20px;
+            line-height: 30px;
+            vertical-align: middle;
+            text-align: center;
+            width: 24px;
+            height: 30px;
+            cursor: pointer;
+
+            &.half:before {
+                content: "\f123";
+                color: #E3CF7A;
+            }
+
+            &.full:before {
+                content: "\f005";
+                color: #E3CF7A;
+            }
+
+            &:before {
+                content: "\f006";
+                color: #999;
+            }
+        }
+    }
+    &.small {
+        height: 20px;
+        padding: 0px;
+        float: left;
+        .stars {
+            width: auto;
+            .star {
+                cursor: auto;
+                font-size: 16px;
+                line-height: 20px;
+                width: 15px;
+                height: 20px;
+            }
+        }
+    }
+    &.hover {
+        .star {
+            &:hover:before, &:hover ~ .star:before {
+                content: "\f005" !important;
+                font-size: 26px;
+                color: #E3CF7A !important;
+            }
+        }
+    }
+
+    .text {
+        display: inline;
+        padding-left: 10px;
+        font-size: 20px;
+        line-height: 30px;
+        vertical-align: middle;
+    }
+}

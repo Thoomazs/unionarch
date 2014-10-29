@@ -1,0 +1,57 @@
+
+#header {
+    background: @primary;
+    margin-bottom: 20px;
+
+    #header-title {
+        padding: 20px 0;
+        h1 {
+            padding-left: 20px;
+            color: white;
+            margin: 0;
+            span.muted {
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 80%;
+                font-weight: 100;
+            }
+        }
+
+        .language-chooser {
+            li {
+                a {
+                    color: white;
+                    padding: 10px 5px;
+                    line-height: 19px;
+                    background: none;
+                    img {
+                        vertical-align: middle;
+                        height: 12px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    #header-nav {
+        background: white;
+        margin-bottom: 0;
+
+        .navbar-brand {
+            img {
+                height: 32px;
+                position: relative;
+                top: -5px;
+            }
+        }
+
+        .navbar-nav {
+            li.active {
+                a {
+                    background: @primary;
+                    color: white;
+                }
+            }
+        }
+    }
+}

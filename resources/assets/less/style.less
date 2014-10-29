@@ -1,0 +1,45 @@
+@import "includes/helpers/lesshat";
+@import "includes/helpers/colors";
+@import "includes/helpers/main";
+
+
+@blue: rgb(83, 173, 216);
+@green: rgb(157, 171, 55);
+
+
+@import "includes/helpers/form";
+
+@import "includes/layouts/header";
+@import "includes/layouts/footer";
+
+@import "includes/pages/products";
+
+body {
+  background: @backgroundGray;
+  color: @textColor;
+}
+
+#flash-messages {
+
+    .alert {
+        text-align: center;
+        .border-radius(0);
+        margin-bottom: 0;
+        padding: 5px 30px;
+    }
+}
+
+form.form-basic {
+    .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.well {
+    background: white;
+    .box-shadow(none);
+}
+
+
+
+@import "includes/pages/error";

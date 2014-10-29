@@ -1,0 +1,97 @@
+#footer {
+    //  background: @backgroundGray;
+    margin-top: 20px;
+
+    h4 {
+        margin-top: 0;
+    }
+    hr.double {
+        margin: 5px 0;
+    }
+    ul {
+        margin: 10px 0px;
+
+        li {
+            float: left;
+            a {
+                background: none;
+                padding: 0px 10px;
+                margin: 0px;
+                color: @textColor;
+                line-height: 40px;
+
+                i {
+                    font-size: 36px;
+                    line-height: 40px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        &.social-networks {
+            li {
+                a {
+                    background: none;
+                    padding: 0px 10px;
+                    margin: 0px;
+
+                    i {
+                        font-size: 36px;
+
+                        &.facebook {
+                            color: @facebookColor;
+                        }
+                        &.twitter {
+                            color: @twitterColor;
+                        }
+                        &.google-plus {
+                            color: @googlePlusColor;
+                        }
+                        &.pinterest {
+                            color: @pinterestColor;
+                        }
+                    }
+
+                    &:hover {
+                    }
+
+                    &.muted {
+                        color: #323232;
+                        text-transform: none;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-info {
+        padding: 5px 0 12px;
+        span {
+            border-right: 1px solid @border;
+            padding-right: 7px;
+            margin-right: 5px;
+            &:last-of-type {
+                border-right: none;
+                padding-right: 0;
+                margin-right: 0;
+            }
+        }
+        a.cynet {
+            img {
+                width: 20px;
+                position: relative;
+                top: -1px;
+                .opacity(0.5);
+                .grayscale(90%);
+            }
+            &:hover {
+                img {
+                    .opacity(1);
+                    .grayscale(0%);
+                }
+            }
+        }
+    }
+
+}
