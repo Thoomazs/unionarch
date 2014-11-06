@@ -11,9 +11,9 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
-    mix.sass("bootstrap.scss")
-       .routes()
-       .events()
-       .phpUnit();
-});
+elixir( function( mix ) {
+    mix.less( ["style.less", "style-admin.less" ] )
+        .styles( ["css/bootstrap.min.css", "css/font-awesome.min.css", "css/style.css"] )
+        .scripts(['js/jquery/jquery.min.js','js/helpers/bootstrap.min.js', 'js/helpers/helpers.js'])
+        .version( ['css/all.min.css','js/all.min.js'] )
+} );

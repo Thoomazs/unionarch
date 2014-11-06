@@ -69,19 +69,16 @@ class AuthController extends BaseController
      *
      * @return Response
      */
-    public function login( Request $request )
+    public function login( LoginRequest $request )
     {
-        die(var_dump("asd"));
         $response = $this->repository->login( $request->only( 'email', 'password' ), $request->get( "remember" ) );
 
         if ( $response === true )
         {
-            return redirect()->route( 'home' );
             return redirect()->intended( route( 'home' ) );
         }
         else
         {
-            return redirect()->route( 'home' );
             return redirect()->route( 'auth.login' )->withErrors( $response );
         }
     }
