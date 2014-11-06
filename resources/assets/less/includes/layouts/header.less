@@ -1,0 +1,38 @@
+
+#header {
+    overflow: hidden;
+    margin-bottom: 1em;
+
+    #quote {
+        margin-top: .53em;
+        font-size: 12px;
+        line-height: 1.2em;
+
+        .author {
+            font-size: 10px;
+        }
+    }
+
+    #menu {
+        margin: @baseSpace 0;
+
+        & > div {
+            padding: 0;
+            padding-right: .48em;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        .block {
+            border: 1px solid @grey;
+            min-height: 3.5em;
+
+            a {
+                display: inline-block;
+                padding-left: 1.7em;
+                margin: 0;
+            }
+        }
+    }
+}

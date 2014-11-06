@@ -1,0 +1,220 @@
+@import url('mixins.less');
+@import url('variables.less');
+
+#atelier {
+	.textPageBlock;
+	min-height: 25em;
+	padding-bottom: 2em;
+
+	h2 {
+		text-transform: uppercase;
+	}
+
+	.col-md-9 {
+		margin-left: -9em;
+	}
+
+	.row.content {
+		margin-left: 2.7em;
+
+		p {
+			line-height: 1.5em;
+		}
+	}
+
+	.quote {
+		float: right;
+		font-size: 1.6em;
+		line-height: 1em;
+		padding: 1em 3em 2em;
+		text-align: right;
+	}
+
+	#categories {
+		.box-link-wrapper {
+			float: left;
+			margin-right: -2.7em;
+		}
+
+		a {
+			color: @black;
+			text-transform: none;
+
+			span {
+				color: @black;
+			}
+
+			span, &::before {
+				padding: .1em .3em;
+			}
+
+			&::before {
+				padding-left: 1.5em;
+				color: @black;
+				background: @black;
+			}
+
+			&.active span {
+				color: white;
+				background: @black;
+			}
+
+			&:hover::before,
+			&:focus::before {
+				color: white;
+			}
+
+			padding-left: 1.3em;
+		}
+	}
+
+	.personGroup {
+		.clearfix;
+	}
+
+	.person {
+		float: left;
+		margin: 0;
+		padding: 0;
+		width: 160px;
+		line-height: 1.15em;
+
+		img {
+			margin-bottom: .5em;
+		}
+
+		.smaller {
+			font-size: .94em;
+		}
+
+		.email {
+			font-size: .94em;
+		}
+
+		&.col-md-3 {
+			width: auto;
+			padding: 0;
+		}
+	}
+
+	.personDetail {
+		margin-top: 1em;
+		padding-bottom: 2em;
+		width: 100%;
+		clearfix: both;
+	}
+
+	&.default {
+		.content p {
+			line-height: 1.3em;
+		}
+
+		.bigger2 {
+			margin-top: 3em;
+		}
+
+		.box-listed {
+			padding-left: 1.6em;
+
+			i {
+				margin: .1em 0 0 -1.5em;
+			}
+		}
+	}
+
+	&.cooperate {
+		.row.content {
+			margin-left: 5em;
+
+			.fa-box {
+				float: left;
+				margin: -.2em 0 -1.2em -1.5em;
+				position: relative;
+			}
+		}
+
+		p {
+			line-height: 1.3em;
+		}
+	}
+
+	&.philosophy {
+		padding-bottom: 3em;
+
+		h3 {
+			margin-top: 2em;
+			font-size: 1.6em;
+			font-weight: bold;
+		}
+
+		p {
+			line-height: 1.3em;
+
+			&.bigger {
+			}
+		}
+
+		.row.content {
+			margin-left: 0;
+		}
+
+		#mainBox {
+			margin-top:  3em;
+
+			text-align: justify;
+
+			-ms-word-break: break-all;
+
+			/* Non standard for webkit */
+			word-break: break-word;
+
+			-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+			hyphens: auto;
+
+			.col1, .col2 {
+				width: 20%;
+				margin-right: 5em;
+			}
+
+			.col3 {
+				width: 34%;
+			}
+		}
+	}
+
+	&.offer {
+		#mainBox {
+			width: 100%;
+			.clearfix;
+			min-height: 20em;
+
+			p {
+				line-height: 1.3em;
+			}
+
+			i.fa-box {
+				position: relative;
+				float: left;
+				margin: .1em .5em 0 .02em;
+			}
+		}
+	}
+
+	&.hlavac, &.vanecek {
+		h2 {
+			margin-top: .3em;
+			margin-bottom: .4em;
+		}
+
+		.person {
+			margin-left: .2em;
+		}
+
+		.cv .fa-box {
+			float: left;
+			margin: -.09em 0 -1.1em -1.5em;
+			position: relative;
+		}
+	}
+}

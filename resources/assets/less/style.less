@@ -1,0 +1,56 @@
+@import "includes/helpers/lesshat";
+@import "includes/helpers/variables";
+@import "includes/helpers/main";
+
+@import "includes/helpers/form";
+
+body {
+    a,
+    a:link,
+    a:visited {
+        color: @linkColor;
+    }
+
+    font-size: 10px;
+    line-height: 1em;
+    padding-top: 1em;
+    padding-bottom: 3em;
+
+    p {
+        margin-bottom: .3em;
+    }
+
+
+    #content {
+        overflow: hidden;
+        border: 2px solid #111111;
+
+        &::before {
+            content:' ';
+            background: black;
+            z-index: 1000;
+            width: 3em;
+            height: 3em;
+            float: left;
+            position: absolute;
+        }
+
+        h2 {
+            text-transform: uppercase;
+            display: block;
+            font-size: 1.9em;
+            margin: .25em 0 .25em 2em;
+        }
+    }
+}
+
+
+
+
+@import "includes/layouts/header";
+@import "includes/layouts/footer";
+
+@import "includes/pages/my-account";
+@import "includes/pages/homepage";
+@import "includes/pages/projects";
+

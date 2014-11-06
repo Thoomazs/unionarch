@@ -29,9 +29,7 @@ class Kernel extends ConsoleKernel {
 		}
 		catch (Exception $e)
 		{
-			$this->reportException($e);
-
-			$this->renderException($output, $e);
+			$output->writeln((string) $e);
 
 			return 1;
 		}

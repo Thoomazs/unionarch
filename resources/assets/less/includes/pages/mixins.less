@@ -1,0 +1,47 @@
+@import url('variables.less');
+
+.textPageBlock {
+	.clearfix;
+	width: 100%;
+	margin-top: @baseSpace;
+	.blockUnit(@black, 3em);
+	min-height: @minBoxHeight;
+
+	.content {
+		padding: 0;
+	}
+}
+
+.blockUnit (@color: black, @dotSize: 1em) {
+	border: 1px solid @color;
+
+	&.main {
+		border: 2px solid @color;
+	}
+
+	h2 {
+		font-size: 1.9em;
+		margin: .25em 0 .25em 2em;
+	}
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}

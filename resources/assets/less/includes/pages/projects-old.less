@@ -1,0 +1,372 @@
+@import url('../helpers/variables.less');
+
+#projects {
+
+    .categories {
+        padding-right: @baseSpace;
+        margin-right: @baseSpace;
+
+        li {
+            float: right;
+            color: @grey;
+            list-style-type: none;
+
+            &.active, &:hover {
+                color: @black;
+
+                a {
+                    color: @black;
+                }
+            }
+
+            a {
+                a {
+                    color: @black;
+                    text-transform: none;
+
+                    span {
+                        color: @black;
+                    }
+
+                    span, &::before {
+                        padding: .1em .3em;
+                    }
+
+                    &::before {
+                        padding-left: 1.5em;
+                        color: @black;
+                        background: @black;
+                    }
+
+                    &.active span {
+                        color: white;
+                        background: @black;
+                    }
+
+                    &:hover::before,
+                    &:focus::before {
+                        color: white;
+                    }
+
+                    padding-left: 1.3em;
+                }
+            }
+        }
+
+
+    }
+
+
+
+
+
+
+	width: 100%;
+	margin-top: @baseSpace;
+
+	p {
+		line-height: 1.3em;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		display: block;
+
+		a, a:hover {
+			text-decoration: none;
+		}
+	}
+
+	#categories, #displays {
+		padding-right: @baseSpace;
+		margin-right: @baseSpace;
+
+		li {
+			float: right;
+			color: @grey;
+			list-style-type: none;
+
+			&.active, &:hover {
+				color: @black;
+
+				a {
+					color: @black;
+				}
+			}
+
+			a {
+				color: @grey;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	#categories {
+		.box-link-wrapper {
+			float: left;
+			margin-right: -2.7em;
+		}
+
+		a {
+			color: @black;
+			text-transform: none;
+
+			span {
+				color: @black;
+			}
+
+			span, &::before {
+				padding: .1em .3em;
+			}
+
+			&::before {
+				padding-left: 1.5em;
+				color: @black;
+				background: @black;
+			}
+
+			&.active span {
+				color: white;
+				background: @black;
+			}
+
+			&:hover::before,
+			&:focus::before {
+				color: white;
+			}
+
+			padding-left: 1.3em;
+		}
+	}
+
+	#displays {
+		margin-right: -.36em;
+
+		a {
+			margin-right: .3em;
+		}
+
+		a:hover, a.active {
+			text-decoration: none;
+			color: @black;
+		}
+	}
+
+	.content {
+		padding: 0;
+		margin: 0;
+
+		#display {
+			margin: 0;
+			width: 100%;
+			.clearfix;
+			padding: 0 0 .5em 0.5em;
+
+			a {
+				text-decoration: none;
+			}
+
+			img {
+				margin-bottom: .3em;
+				border: 1px solid @lightGrey;
+			}
+
+			h3 {
+				margin-top: 0em;
+				margin-bottom: .3em;
+				font-size: 1.7em;
+			}
+
+			&.pexeso {
+				.item {
+					float: left;
+					display: inline;
+					position: relative;
+					margin-right: .3em;
+
+					.name {
+						color: @black;
+						background: white;
+						position: absolute;
+						z-index: 15;
+						left: 0;
+						bottom: 0;
+						visibility: hidden;
+						opacity: 0;
+						width: 100%;
+						padding: .5em;
+						height: 3em;
+						margin-bottom: .3em;
+					}
+
+					&:hover .name {
+						visibility: visible;
+						opacity: .8;
+					}
+				}
+			}
+
+			&.semi {
+				.projectNotes {
+					padding: 0;
+					min-height: 9em;
+				}
+			}
+
+			&.text {
+				.row {
+					margin-bottom: 1.4em;
+				}
+
+				.row .dot {
+					width: 1.5em;
+					height: 1.5em;
+					background: @black;
+					float: left;
+					margin-right: 3em;
+				}
+
+				.col-md-11 {
+					margin-left: -6.4em;
+				}
+
+				h3 .small {
+					color: @black;
+					font-size: .6em;
+				}
+			}
+		}
+	}
+
+	#projectList {
+		.clearfix;
+		margin-bottom: .5em;
+	}
+
+	&.showroom {
+		iframe {
+			margin: 2em 0 3em 4.3em;
+			border: 0;
+			overflow: none;
+			background: 000;
+
+			&.showroom {
+                width: 65.5em;
+  			    height: 51em;
+                margin: -1em -0px 2em -0px;
+                padding-bottom: 1.5em;
+            }
+		}
+
+		#singleSwf {
+			width: 65.5em;
+			height: 46em;
+			padding: 2em 0 1.6em 0;
+		}
+
+		.backlink {
+			float: right;
+			margin: 1em .7em  0 5em;
+		}
+	}
+
+	&.detail {
+		// todo: new, testing
+		.projectNameLightVersion {
+			margin-left: .7em;
+			font-size: 1.5em;
+			text-transform: uppercase;
+
+			span {
+				line-height: .8em;
+				padding-left: 1.8em;
+			}
+		}
+
+		.headlineLightVersion {
+			margin-left: -1.4em;
+
+			span {
+				line-height: .8em;
+				padding-left: 1.6em;
+			}
+		}
+
+		#tseLogo {
+			float: right;
+			margin: 1em 2em -3em 0;
+			line-height: 1.5em;
+		}
+
+		#showroomVideoFrame {
+            width: 100%;
+            background: black;
+            margin: .5em 0 0em 0;
+            padding: 0;
+            text-align: center;
+
+            iframe {
+                padding-top: .5em;
+                margin: 0;
+
+            }
+        }
+
+		#projectDescription {
+			margin: 1em 3em 1em 1.8em;
+
+			span {
+				font-size: .9em;
+			}
+
+			#infoItems {
+				width: 100%;
+				.clearfix;
+
+				.item {
+					float: left;
+					margin-right: 5em;
+				}
+			}
+
+			.dotsmaller:before {
+				font-size: 1.8em;
+				margin: -1.4em 0 0 -.8em;
+			}
+
+			.fa-box {
+				position: relative;
+				display: inline-table;
+				margin: -.2em 0em 0 -.3em;
+			}
+
+			.text {
+				clear: both;
+				margin-top: .5em;
+			}
+
+
+			#infoBox {
+				.fullInfoLink {
+					text-decoration: underline;
+					line-height: 2.5em;
+					cursor: pointer;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+
+				#fullInfo {
+					display: none;
+				}
+			}
+		}
+
+	}
+
+}

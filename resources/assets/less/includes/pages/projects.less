@@ -1,0 +1,98 @@
+@import url('../helpers/variables.less');
+
+#projects {
+
+    .categories {
+
+        li {
+            margin: 0 .15em;
+            float: left;
+            color: @grey;
+            list-style-type: none;
+
+            &.active, &:hover {
+                color: @black;
+
+                a {
+                    color: @black;
+                }
+                span {
+                    background: @black;
+                    color: white;
+                }
+            }
+
+            a {
+                margin: 0;
+                color: @black;
+                text-transform: none;
+
+                span {
+                    color: @black;
+                }
+
+                span, &::before {
+                    padding: .1em .3em;
+                }
+
+                &::before {
+                    padding-left: 1.5em;
+                    color: @black;
+                    background: @black;
+                }
+
+                &.active span {
+                    color: white;
+                    background: @black;
+                }
+
+                &:hover::before,
+                &:focus::before {
+                    color: white;
+                }
+
+                padding-left: 1.3em;
+            }
+        }
+    }
+    .product-view {
+        margin-right: 0.3em;
+
+        a {
+            margin-right: .3em;
+
+            &.active {
+                color: @black;
+            }
+        }
+    }
+    .projects {
+        margin: .2em;
+
+        & > div {
+            padding: .2em;
+        }
+        .project {
+            position: relative;
+            img {
+                width: 100%;
+            }
+            .name {
+                display: none;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 5px;
+                min-height: 30px;
+                background: rgba(255, 255, 255, .8);
+            }
+
+            &:hover {
+                .name {
+                    display: block;
+                }
+            }
+        }
+    }
+}

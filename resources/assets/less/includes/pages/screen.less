@@ -1,0 +1,263 @@
+@import url('mixins.less');
+@import url('css/variables.less');
+
+body {
+	font-size: @fontSize;
+	line-height: 1em;
+	padding-top: 1em;
+	padding-bottom: 3em;
+
+	p {
+		margin-bottom: .3em;
+	}
+}
+
+.container {
+	width: @containerWidth;
+}
+
+a {
+	color: @darkGrey;
+
+	&:hover {
+		color: @black;
+	}
+}
+
+#quote {
+	margin-top: .53em;
+	font-size: 12px;
+	line-height: 1.2em;
+
+	.author {
+		font-size: @fontSize;
+	}
+}
+
+
+
+
+.box-link-wrapper {
+    margin: 0;
+    padding: 0;
+
+    i {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* personalization */
+#menu > div > div > div, #contact > div.pull-left > div {
+    a {
+        margin: 0;
+        padding-left: 1.7em;
+    }
+}
+
+
+#menu {
+	margin: @baseSpace 0;
+
+	.block {
+		width: 33%;
+		float: left;
+
+		.blockUnit(@grey, 1.5em);
+		min-height: 3.5em;
+
+		&:nth-child(2), &:first-child {
+			margin-right: .48em;
+		}
+
+		/*
+		&.active {
+			.blockUnit(@black, 1.5em);
+		}
+		*/
+
+		.content {
+			padding-left: 1.9em;
+			text-transform: uppercase;
+		}
+	}
+
+	.twoItems {
+		.block {
+			width: 49.758%;
+
+			&:nth-child(2) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	.subitems {
+		float: right;
+		margin-top: 1.5em;
+		margin-bottom: 0;
+		font-size: .95em;
+		text-transform: none;
+
+		li {
+			list-style-type: none;
+			display: inline;
+
+			&:before {
+				content: "■";
+				font-size: 2.2em;
+				vertical-align: bottom;
+				line-height: .6em;
+			}
+
+			margin-right: .6em;
+		}
+	}
+
+}
+
+#posts {
+	text-align: right;
+	margin-top: @baseSpace;
+
+	.title {
+		// margin-bottom: 0;
+		color: @darkGrey;
+		text-transform: uppercase;
+		// background: white;
+	}
+
+	ul {
+		margin-top: @baseSpace;
+
+		li {
+			list-style-type: none;
+			line-height: 1.5em;
+		}
+	}
+}
+
+footer {
+	width: 100%;
+	.clearfix;
+
+	#contact {
+		width: 38em;
+		.blockUnit(@grey, 1.5em);
+		min-height: 3.5em;
+
+		p {
+			line-height: 1.3em;
+			margin-top: .2em;
+			margin-right: .3em;
+		}
+	}
+}
+
+#switchLangControl {
+	margin-top: 1.3em;
+	margin-left: -4em;
+
+	a {
+		padding: .5em;
+		background: @black;
+		color: @grey;
+
+		&:hover {
+			background: @grey;
+			color: @black;
+			text-decoration: none;
+		}
+	}
+}
+
+
+.dotbefore {
+	&:before {
+		content: "■";
+		vertical-align: bottom;
+		line-height: .6em;
+		font-size: 2.2em;
+		// margin-left: -.7em;
+		margin-top: 1em;
+
+		// project/detail.latte
+		&.dotfix {
+			line-height: .7em;
+		}
+	}
+
+	&.dotbig:before {
+		font-size: 4em;
+		line-height: 1.5em;
+	}
+
+	&.dotmiddle:before {
+		font-size: 3em;
+	}
+
+	&.dotsmaller:before {
+		font-size: 2.2em;
+		margin-top: -1em;
+		margin-left: -0.75em;
+	}
+
+}
+
+// sizes
+.bigger {
+	font-size: 1.3em;
+}
+
+.bigger2 {
+	font-size: 1.5em;
+}
+
+
+
+// box stuffs
+a.box-link, a.box-right {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+
+	// &:hover, &.active {
+	// 	//background: black;
+	// 	//color: white;
+	// }
+
+	i {
+		margin-left: -.1em;
+		line-height: inherit;
+	}
+}
+
+.fa-box:before {
+ 	content: "■";
+}
+
+.fa-box1:before {
+	content: "■";
+	font-size: 1.75em;
+	position: absolute;
+	margin-top: -.1em; // required for Windows probably
+}
+
+.fa-box2:before {
+	content: "■";
+	font-size: 2.3em;
+	position: absolute;
+	margin-top: -.1em; // required for Windows probably
+}
+
+.fa-box-biggest {
+	background: black;
+	z-index: 1000;
+	width: 3em;
+	height: 3em;
+	// display: inline-block;
+	float: left;
+	position: absolute;
+}
+
